@@ -5,13 +5,22 @@ Great Pyramid Analysis
 """
 
 print("\n\n\t\t\t---- This program will show you some pretty interesting calculations related to the great pyramid! ----\n\n ")
-print("Please select from the following:\n\nOption A:\n\n\tIt has been estimated that the Great Pyramid weighs around 5.9 million tons. It is also said that the pyramids only took 20 years to build.\n\tOption A will calculate whether this is even possible.\n\nOption B,\n\nOption C\n")
+
+print("""
+
+Please select from the following: \n\nOption A: \n\n\tIt has been estimated that the Great Pyramid of Giza weighs around 5.9 million tons.
+It is also said that the pyramids only took 20 years to build.\n\tOption A will calculate exactly how much stone was moved per day to accomplish this.
+\n\nOption B,\n\nOption C\n
+
+""")
+
+stone_per_day = 5_900_000
+
 while True:
     user_input = input("Please enter A, B, C (or enter Q to quit): ").upper()
     if user_input == "A":
-        pass
+        print(f"""\nThe ancient Egyptions would have had to move {stone_per_day} tons of stone per day to build the massive structure in only 20 years. """)
     # do something
-
 
     elif user_input == "B":
         pass
