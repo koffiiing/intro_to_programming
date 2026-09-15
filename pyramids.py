@@ -5,7 +5,7 @@ Great Pyramid Analysis
 """
 import math
 
-print("\n\n\t\t\t---- This program will show you some pretty interesting calculations related to the great pyramid! ----\n ")
+print("\n\n\t\t\t---- THIS PROGRAM WILL SHOW YOU SOME INTERESTING CALCULATIONS RELATED TO THE GREAT PYRAMID OF GIZA!---- ")
 
 print("""
 
@@ -20,25 +20,26 @@ Option A will calculate exactly how much stone would have had to have been moved
 Option B:
 
 Each side of the Great Pyramid is 230.4 meters and it's original height was 146.5m.
-Option B will calculate the perimeter of the Great Pyramid, divide the perimeter by its height, and display the result.
+Option B will calculate the perimeter of the Great Pyramid, divided by its height, and display the result.
 Do you see a significance to this number?
 
 Option C:
 
-
+If we calculate the circumference
 
 """)
 
-# Variables used for calculations
-days_in_20y = 20 * 365
-stone_per_day = 5900000 / days_in_20y
+# Calculation Variables
+a_stones_per_day = 5900000 / (20 * 365)
+
+b_pyramid_perimeter_cal = (230.4 * 4) / 146.5
 
 while True:
     user_input = input("Please enter A, B, C (or enter Q to quit): ").upper()
     if user_input == "A":
         print(f"""
 
-The ancient Egyptions would have had to move roughly {math.trunc(stone_per_day)} tons
+The ancient Egyptions would have had to move roughly {math.trunc(a_stones_per_day)} tons
 or 17,000,000 pounds of stone per day to build the Great Pyramid of Giza in only 20 years.
 
 """)
