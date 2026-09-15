@@ -31,8 +31,9 @@ If we calculate the circumference
 
 # Calculation Variables
 a_stones_per_day = 5900000 / (20 * 365)
-
 b_cal = (230.4 * 4) / 146.5
+# c1 = 230.4**2 + 230.4**2 = d**2
+c2 = math.pi * 230.4 # I know this is only part of the equation. This is just for testing syntax.
 
 while True:
     user_input = input("Please enter A, B, C (or enter Q to quit): ").upper()
@@ -45,11 +46,17 @@ or 17,000,000 pounds of stone per day to build the Great Pyramid of Giza in only
 """)
 
     elif user_input == "B":
-        print(f"{b_cal}")
+        print(f"""
+
+The output equals {b_cal}, which is an aproximation to Tau or 2pi.
+This is significant because mathematical theorists highlight variations of measurements (including the 6.290 figure)
+to suggest that the pyramid was deliberately built as a scale model to encapsulate the mathematical relationships of a sphere, specifically matching the proportions of the Earth
+
+""")
 
     elif user_input == "C":
-        pass
-    # do something
+        print(c2)
+
     elif user_input == "Q":
         break
 
