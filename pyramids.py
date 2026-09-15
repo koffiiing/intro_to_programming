@@ -15,7 +15,7 @@ Option A:
 
 It has been estimated that the Great Pyramid of Giza weighs around 5.9 million tons.
 It is also said that the pyramids only took 20 years to build.
-Option A will calculate exactly how much stone would have had to have been moved each day to accomplish this seemingly impossible feet.
+Option A will calculate exactly how much stone the Egyptians would have had to move each day to accomplish this seemingly impossible feet.
 
 Option B:
 
@@ -32,7 +32,7 @@ If we calculate the circumference
 # Calculation Variables
 a_stones_per_day = 5900000 / (20 * 365)
 
-b_pyramid_perimeter_cal = (230.4 * 4) / 146.5
+b_cal = (230.4 * 4) / 146.5
 
 while True:
     user_input = input("Please enter A, B, C (or enter Q to quit): ").upper()
@@ -45,8 +45,8 @@ or 17,000,000 pounds of stone per day to build the Great Pyramid of Giza in only
 """)
 
     elif user_input == "B":
-        pass
-    # do something
+        print(f"{b_cal}")
+
     elif user_input == "C":
         pass
     # do something
