@@ -8,9 +8,9 @@ WORLD_POP = 8_300_000_000
 SQMI_TO_ACRE_CONV = 640
 SQMI_TO_SQFT_CONV = 2.788e7
 
-print("""
+print(f"""
 
-World population: 8,300,000,000
+World population: {WORLD_POP}
 
 ~ This program will show the area per person if we take
 the entire world population and put it into one specific area. ~""")
