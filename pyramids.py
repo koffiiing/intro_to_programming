@@ -65,7 +65,9 @@ to suggest that the pyramid was deliberately built as a scale model to encapsula
 #
 # Calc Circle 1 circumference
 # side^2 + side^2 = C^2
+c_squared = 230.4 ** 2 + 230.4 ** 2
 # solve for c (squae root it)
+c = math.sqrt(c_squared)
 # calculate circumference using c
 
 
