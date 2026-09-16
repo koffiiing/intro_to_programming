@@ -25,15 +25,20 @@ Do you see a significance to this number?
 
 Option C:
 
-If we calculate the circumference
+Option C will calculate the circumference of a circle that encloses the outside of the Great Pyramid and the circumference of a circle that fills the inside.
+It will then, subtract the smallest circumference from the largest circumference and display the sum.
 
 """)
 
-# Calculation Variables
+# Option A & B calculations
 a_stones_per_day = 5900000 / (20 * 365)
 b_cal = (230.4 * 4) / 146.5
-# c1 = 230.4**2 + 230.4**2 = d**2
-c2 = math.pi * 230.4 # I know this is only part of the equation. This is just for testing syntax.
+
+# Option C calculations
+d = 230.4 * math.sqrt(2)
+c1 = d * math.pi # calculate circumference using c
+c2 = math.pi * 230.4
+answer = c1 - c2
 
 while True:
     user_input = input("Please enter A, B, C (or enter Q to quit): ").upper()
@@ -55,23 +60,11 @@ to suggest that the pyramid was deliberately built as a scale model to encapsula
 """)
 
     elif user_input == "C":
-        print(c2)
+        print(f"""
+
+The sum is {answer}. Do you see significance to this number? It is equal to the speed of light in KMPH when multiplied by 1000
+
+            """)
 
     elif user_input == "Q":
         break
-
-#3
-#
-#
-# Calc Circle 1 circumference
-# side^2 + side^2 = C^2
-c_squared = 230.4 ** 2 + 230.4 ** 2
-# solve for c (squae root it)
-c = math.sqrt(c_squared)
-# calculate circumference using c
-
-
-# Calc circle 2 circumference
-
-
-# Take circle 1 circumference and subract circle 2 circumference
