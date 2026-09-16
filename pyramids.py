@@ -36,7 +36,7 @@ b_cal = (230.4 * 4) / 146.5
 
 # Option C calculations
 d = 230.4 * math.sqrt(2)
-c1 = d * math.pi # calculate circumference using c
+c1 = d * math.pi
 c2 = math.pi * 230.4
 answer = c1 - c2
 
