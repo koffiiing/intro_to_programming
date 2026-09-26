@@ -12,19 +12,21 @@ My Utilities
 import random
 
 # If user target == 0 use this function.
-def roll_dice(times, sides):
-    total = 0 #accumulator value
-    for i in range(times):
-        roll = random.randint(1, sides)
-        total += roll
-    return total
+
 
 # need an if statement for assignment  to determine how many times the rolls hit the target number.
 
 
 
 def main():
-    pass
+
+    def roll_dice(times, sides):
+        total = 0 #accumulator value
+        for i in range(times):
+            roll = random.randint(1, sides)
+            total += roll
+        return total
+        print(total)
 
 if __name__ == "__main__":
     main()
