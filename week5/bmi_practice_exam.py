@@ -38,7 +38,7 @@ def main():
     while True:
         # Get user input for weight and height
         user_weight = float(input("Enter your weight(kg) or 0 to quit: "))
-        if user_weight == 0:
+        if user_weight == "0":
             break
         user_height = float(input("Enter your height(m): "))
 
