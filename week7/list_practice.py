@@ -51,6 +51,3 @@ while True:
     position = random.randint(0,len(names)-1)
     print(names[position])
     input()
-
-my_list = [0,1,2,3,4,5,6,7,8,9]
-print(list(range(10)))
