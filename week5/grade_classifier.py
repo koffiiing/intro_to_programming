@@ -18,10 +18,7 @@ def classify_grade(grade):
     return letter
 
 def main():
-    total = 0
-    count = 0
-    max_num = ""
-    min_num = ""
+    grades = []
     count_a = 0
     count_b = 0
     count_c = 0
@@ -31,14 +28,8 @@ def main():
         user_grade = float(input("Enter a grade (-1 to quit): ".upper()))
         if user_grade == -1:
             break
-        total += user_grade
-        count += 1
+        grades.append(user_grade)
         print("Letter grade: "+ classify_grade(user_grade))
-
-        if max_num == "" or user_grade > max_num:
-            max_num = user_grade
-        if min_num == "" or user_grade < min_num:
-            min_num = user_grade
 
         if user_grade >= 90:
             count_a += 1
@@ -54,12 +45,12 @@ def main():
 # Make it so that when the user is done entering grades it displays the average grade in number and letter.
 # Add all of the grade numbers entered together and then divide by the entries.
 
-    print("Number of grades: "+str(count))
-    print("Average grade: "+str(total/count), end= " ")
-    print(classify_grade(total/count))
-    print("Max grade: "+str(max_num))
-    print("Min Grade: "+str(min_num))
-    print("A grade: "+str(count_a))
+    print("Number of grades: "+str(len(grades)))
+    print("Average grade: "+str(sum(grades)/len(grades)), end= " ")
+    print(classify_grade(sum(grades)/len(grades)))
+    print("Max grade: "+str(max(grades)))
+    print("Min Grade: "+str(min(grades)))
+
 
 if __name__ == "__main__":
         main()
