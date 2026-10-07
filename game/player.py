@@ -7,6 +7,7 @@ player.py
 import random
 
 def gen_name():
+    """Generates a random name for the player by combining a first name, second name, and suffix."""
     first_name = "Chud Nugget Magpie Monkey Trundle Smash Thimble Goose Pigeon Jelly Jigglewiggle".split()
     second_name = "Mackleson Anoos Blood Puncher Wigglebottom Thunderthighs O'Shenanigan O'Flander Dumper Thunderpants".split()
     third_name = ["Jr.", "Sr.", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
