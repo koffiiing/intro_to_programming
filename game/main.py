@@ -5,16 +5,16 @@ Game 1
 """
 
 import player
-import player_history
 import os
+import subprocess
 
 def main():
 
     while True:
-
+        subprocess.run("cls" if os.name == "nt" else "clear", shell=True)
         print(f"\nPlayer name: {player.gen_name()}")
 
-        print(f"\n{player_history.gen_history()}\n")
+        print(f"\n{player.gen_history()}\n")
 
         user_input = input("Do you like this character (Y/N)?: ").upper()
         if user_input == "N":
