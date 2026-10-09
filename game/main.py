@@ -11,7 +11,7 @@ import subprocess
 def main():
 
     while True:
-        subprocess.run("cls" if os.name == "nt" else "clear", shell=True)
+        subprocess.run("cls" if os.name == "nt" else "clear", shell=True) # this clears the shell terminal each time a new name is generated
         print(f"\nPlayer name: {player.gen_name()}")
 
         print(f"\n{player.gen_history()}\n")
