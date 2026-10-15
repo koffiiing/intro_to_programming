@@ -23,7 +23,7 @@ def gen_player(level):
     player['history'] = gen_history()
     player['attack'] = my_utilities.roll_dice(3, 6) + my_utilities.roll_dice(level, 4)
     player['defense'] = my_utilities.roll_dice(3, 6) + my_utilities.roll_dice(level, 4)
-    player['health'] = my_utilities.roll_dice(3, 6) + my_utilities.roll_dice(level, 4)
+    player['health'] = my_utilities.roll_dice(5, 6) + my_utilities.roll_dice(level, 4)
     player['row'] = 0
     player['col'] = 0
     return player
