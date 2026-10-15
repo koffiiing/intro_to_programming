@@ -11,7 +11,7 @@ def main():
     while True:
         print("\033[H\033[2J\033[3J", end="") # escape codes that clear the terminal each time a new player is generated
 
-        new_player = player.gen_player(level)
+        new_player = player.gen_player(level) # calls gen_player to create a new player and assign it to new_player variable
         player.display_player(new_player)
 
         user_input = input("Do you like this character (Y/N)?: ").upper()

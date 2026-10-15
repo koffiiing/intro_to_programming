@@ -8,6 +8,7 @@ import random
 import my_utilities
 
 def display_player(player):
+    """retrieves all player info from gen_player function to display to user"""
     print("\nName: "+player['name'])
     print("\n" + player['history'] + "\n")
     print("Player stats: \n")
@@ -53,7 +54,7 @@ def gen_history():
         "You are now a famous explorer who hasn't yet discovered anything at all. At least you're famous though right?",
         "You are now a skilled musician who played in a world-famous orchestra.",
         "You are now a celebrated author of best-selling novels.",
-        "You are now a legendary athlete who broke multiple records.",
+        "You are now a legendary athlete who has broken multiple records.",
         "You are now a brilliant scientist who made groundbreaking discoveries.",
         "You are now a talented artist whose paintings were displayed in galleries worldwide.",
         "You are now a successful entrepreneur who built a thriving business empire.",
