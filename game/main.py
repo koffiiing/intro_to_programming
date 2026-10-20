@@ -5,22 +5,21 @@ Game 1
 """
 
 import player
-import os
-import subprocess
 
 def main():
-
+    level = 1
     while True:
-        subprocess.run("cls" if os.name == "nt" else "clear", shell=True) # this clears the shell terminal each time a new name is generated
-        print(f"\nPlayer name: {player.gen_name()}")
+        print("\033[H\033[2J\033[3J", end="") # escape codes that clear the terminal each time a new player is generated
 
-        print(f"\n{player.gen_history()}\n")
+        new_player = player.gen_player(level) # calls gen_player to create a new player and assign it to new_player variable
+        player.display_player(new_player)
 
         user_input = input("Do you like this character (Y/N)?: ").upper()
         if user_input == "N":
             continue
         if user_input == "Y":
+            print("Good luck, " + new_player['name'] + "!")
             break
-        
+
 if __name__ == "__main__":
     main()

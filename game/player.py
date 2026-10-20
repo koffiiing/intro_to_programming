@@ -5,10 +5,33 @@ player.py
 """
 
 import random
+import my_utilities
+
+def display_player(player):
+    """retrieves all player info from gen_player function to display to user"""
+    print("\nName: "+player['name'])
+    print("\n" + player['history'] + "\n")
+    print("Player stats: \n")
+    print("Attack: " + str(player['attack']))
+    print("Defense: " + str(player['defense']))
+    print("Health: " + str(player['health']) + "\n")
+
+def gen_player(level):
+    """Builds a player dictionary with name, history, and stats."""
+    player = {}
+    player['name'] = gen_name()
+    player['history'] = gen_history()
+    player['attack'] = my_utilities.roll_dice(3, 6) + my_utilities.roll_dice(level, 4)
+    player['defense'] = my_utilities.roll_dice(3, 6) + my_utilities.roll_dice(level, 4)
+    player['health'] = my_utilities.roll_dice(5, 6) + my_utilities.roll_dice(level, 4)
+    player['row'] = 0
+    player['col'] = 0
+    return player
+
 
 def gen_name():
     """Generates a random name for the player by combining a first name, second name, and suffix."""
-    first_name = "Chud Nugget Magpie Monkey Trundle Smash Thimble Goose Pigeon Jelly Jigglewiggle Steve Rick Rip Chugger Trunbutt".split() 
+    first_name = "Chud Nugget Magpie Monkey Trundle Smash Thimble Goose Pigeon Jelly Jigglewiggle Steve Rick Rip Chugger Trunbutt".split()
     second_name = "Mackleson Anoos Blood Puncher Wigglebothem Thunderthighs O'Shenanigan Flanders O'Flanegan Dumper Thunderpants".split()
     third_name = ["Jr.", "Sr.", "III", "IV", "V", "VI", "VII", "VIII", "IX", "X"]
     first_piece = first_name[random.randint(0, len(first_name)-1)] # Taking a random name from the first_name list and assigning it to a variable
@@ -22,7 +45,7 @@ def gen_history():
         "Your crap is all messed up and you talk funny.",
         "You were born a 19lb, 3oz baby and still are a 19lb, 3oz baby to this day. 37 years later. You're Still the same size and weight, execpt now you have telepathy powers and diabetes.",
         "You were born in the blood of your fathers enemies. Destined for glorious combat but you chose a different path and are far less cool now.",
-     
+
     ]
     # list of character occupations
     occupation = [
@@ -31,8 +54,7 @@ def gen_history():
         "You are now a famous explorer who hasn't yet discovered anything at all. At least you're famous though right?",
         "You are now a skilled musician who played in a world-famous orchestra.",
         "You are now a celebrated author of best-selling novels.",
-        "You are now a legendary athlete who broke multiple records.",
-        "You are now a legendary athlete who broke multiple records.",
+        "You are now a legendary athlete who has broken multiple records.",
         "You are now a brilliant scientist who made groundbreaking discoveries.",
         "You are now a talented artist whose paintings were displayed in galleries worldwide.",
         "You are now a successful entrepreneur who built a thriving business empire.",
@@ -43,5 +65,3 @@ def gen_history():
     second_hist = occupation[random.randint(0, len(occupation)-1)]
     history = first_hist + "\n\n" + second_hist
     return history
-
-
