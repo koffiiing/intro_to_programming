@@ -1,7 +1,7 @@
 for i in range(1, 101):
-    print(end=" ")
+    print(i, end=" ")
     if i % 3 == 0:
-        print(i, end="abra")
+        print(end="abra")
     if i % 5 == 0:
-        print(i, end="cadabra")
-    print(i)
+        print(end="cadabra")
+    print()
