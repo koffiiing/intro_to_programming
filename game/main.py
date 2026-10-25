@@ -5,6 +5,7 @@ Game 1
 """
 
 import player
+import board
 
 def main():
     level = 1
@@ -20,6 +21,11 @@ def main():
         if user_input == "Y":
             print("Good luck, " + new_player['name'] + "!")
             break
+
+    game_board = board.create_board()
+    new_player = {'row': 0, 'col': 0}
+    game_board, new_player = board.place_player(game_board, new_player)
+    board.show_board(game_board)
 
 if __name__ == "__main__":
     main()
