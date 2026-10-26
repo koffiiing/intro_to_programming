@@ -7,6 +7,8 @@ import random
 
 bank_roll = 100
 
+user_chips = []
+int(input("Enter amount you would like to exchange in chips: "))
 # Put money in machine
 user_bet = int(input("Enter a bet: "))
 
