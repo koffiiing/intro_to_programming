@@ -10,7 +10,12 @@ My Utilities
 # in other words, times D sides.
 
 import random
+import subprocess
+import os
 
+def clear_screen():
+    command = "cls" if os.name == "nt" else "clear"
+    subprocess.run(command, shell=True)  
 
 # Rolls the dice and returns the total of all the rolls added together.
 def roll_dice(times, sides):
