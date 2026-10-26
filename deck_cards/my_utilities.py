@@ -15,7 +15,7 @@ import subprocess
 
 def clear_screen():
     command = "cls" if os.name == "nt" else "clear"
-    subprocess.run(command, shell=True)  
+    subprocess.run(command, shell=True)
 
 def roll_dice(times, sides):
     total = 0 #accumulator value

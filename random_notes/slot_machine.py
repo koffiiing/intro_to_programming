@@ -7,7 +7,7 @@ import random
 
 bank_roll = 100
 
-# Put money machine
+# Put money in machine
 user_bet = int(input("Enter a bet: "))
 
 for i in range(3):
