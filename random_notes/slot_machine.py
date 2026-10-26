@@ -7,7 +7,9 @@ import random
 
 bank_roll = 100
 
-# Put money machine
+user_chips = []
+int(input("Enter amount you would like to exchange in chips: "))
+# Put money in machine
 user_bet = int(input("Enter a bet: "))
 
 for i in range(3):

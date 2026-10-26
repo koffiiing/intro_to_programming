@@ -4,15 +4,15 @@ Robert Fesperman
 Game 1
 """
 
-import player
 import board
 import my_utilities
+import player
+import board
 
 def main():
     level = 1
     while True:
-
-        my_utilities.clear_screen()
+        print("\033[H\033[2J\033[3J", end="") # escape codes that clear the terminal each time a new player is generated
 
         new_player = player.gen_player(level) # calls gen_player to create a new player and assign it to new_player variable
         player.display_player(new_player)
@@ -25,6 +25,7 @@ def main():
             print("Good luck, " + new_player['name'] + "!")
             break
 
+    # generates the game board and places player in random location it
     game_board = board.create_board()
     new_player = {'row': 0, 'col': 0}
     game_board, new_player = board.place_player(game_board, new_player)
