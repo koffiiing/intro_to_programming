@@ -31,8 +31,6 @@ def place_students(room, num_students):
         return False
     for student_num in range(1, num_students+1):
         while True:
-            if room[row][col] == str(student_num):
-                continue
             row = random.randint(0, len(room)-1)
             col = random.randint(0, len(room[0])-1)
             if room[row][col] == ".":
