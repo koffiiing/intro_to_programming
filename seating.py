@@ -8,6 +8,7 @@ import random
 
 # creates the room
 def create_room():
+    """generates room to then be displayed in terminal"""
     room = []
     for i in range(5):
         row = []
@@ -18,16 +19,20 @@ def create_room():
 
 # prints room to terminal
 def show_room(room):
+    """displays room in terminal"""
     for row in room:
         print(" ".join(row))
 
 # places student in available "seat" in room
 def place_students(room, num_students):
+    """places student in room in random seat"""
     if num_students > len(room) * len(room[0]):
         print("Room too small!")
         return False
     for student_num in range(1, num_students+1):
         while True:
+            if room[row][col] == str(student_num):
+                continue
             row = random.randint(0, len(room)-1)
             col = random.randint(0, len(room[0])-1)
             if room[row][col] == ".":
