@@ -15,10 +15,6 @@ import os
 
 def clear_screen():
     command = "cls" if os.name == "nt" else "clear"
-    subprocess.run(command, shell=True)  
-
-def clear_screen():
-    command = "cls" if os.name == "nt" else "clear"
     subprocess.run(command, shell=True)
 
 # Rolls the dice and returns the total of all the rolls added together.
