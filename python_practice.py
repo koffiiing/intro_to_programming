@@ -1,7 +1,14 @@
-my_dict = {1:"One", 2:"Two", 3:"Three"}
-for key in my_dict:
-    print(str(key), str(my_dict[key]))
+import math
+import random
 
-user_input = input("Enter a key to search for: ")
-if user_input in my_dict:
-    print("Found it!")
+number = int(input("Please enter an integer: "))
+sqrt_num = math.sqrt(number)
+times_pi = math.pi * number
+print(sqrt_num)
+print(times_pi)
+print("\n\n")
+user_job = input("Please enter your job title: ")
+print("Your profession is "+(user_job))
+ran_num = random.randint(1, 1000)
+print(f"Your lucky number is: {ran_num}")
+print("Robert\tFesperman\tSoftware Development")

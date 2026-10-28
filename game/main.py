@@ -14,7 +14,7 @@ def main():
     level = 1
     while True:
 
-        my_utilities.clear_screen # escape codes that clear the terminal each time a new player is generated
+        my_utilities.clear_screen() # escape codes that clear the terminal each time a new player is generated
 
         new_player = player.gen_player(level) # calls gen_player to create a new player and assign it to new_player variable
         player.display_player(new_player)
