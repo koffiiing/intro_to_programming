@@ -5,18 +5,19 @@ If something is entered, reprompt for input:
 """
 
 def get_command(valid_inputs):
-    user_input = input('Enter a command: ').upper()
-    if user_input in valid_inputs:
-        return user_input
-    else:
-        print("Error. Only valid inputs are: ")
-        for key in valid_inputs:
-            print(key, end = " ")
-        print()
+    while True:
+        user_input = input('Enter a command(Q to quit): ').upper()
+        if user_input in valid_inputs:
+            return user_input
+        else:
+            print("Error. Only valid inputs are: ")
+            for key in valid_inputs:
+                print(key, end = " ")
+            print()
 
 
 def main():
-    print("The key you pressed was: "+get_command(["W", "A", "S", "D", "Q"]))
+    print("The key you pressed was: "+get_command(["W", "A", "S", "D"]))
 
 
 if __name__ == "__main__":

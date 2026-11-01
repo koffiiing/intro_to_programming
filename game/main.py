@@ -61,7 +61,7 @@ command player notes
         board[player['row'][player['col']] = "@"
         return board, player
 
-        bone head way to deten
+        bone head way to detect
 
         if player row = 0:
             player['row']
